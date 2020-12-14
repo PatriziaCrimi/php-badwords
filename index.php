@@ -1,8 +1,9 @@
 <?php
   $badword = $_GET['badword'];
-
   $title = 'Censuratore';
   $subtitle = 'Scioglilingua numero: ';
+  $censored = 'Scioglilingua censurato:';
+  $par_length = 'Lunghezza del paragrafo originale: ';
   $paragraph_1 = 'Apelle figlio d\'Apollo fece una palla di pelle di pollo, tutti i pesci vennero a galla per vedere la palla di pelle di pollo fatta da Apelle figlio d\'Apollo.';
   $paragraph_1_censored = 'Apelle figlio d\'Apollo fece una ' . $badword . ' di pelle di pollo, tutti i pesci vennero a galla per vedere la ' . $badword . ' di pelle di pollo fatta da Apelle figlio d\'Apollo.';
   $paragraph_2 = 'Una rara rana nera sulla rena errò una sera, una rara rana bianca sulla rena errò un po\' stanca.';
@@ -38,6 +39,10 @@
       <?php echo $paragraph_1_censored;
       ?>
     </p>
+    <h4>
+      <?php echo $par_length . strlen($paragraph_1);
+      ?>
+    </h4>
     <!-- Tongue-twister num. 2 -->
     <h2>
       <?php echo $subtitle . '2';
@@ -55,6 +60,10 @@
       <?php echo $paragraph_2_censored;
       ?>
     </p>
+    <h4>
+      <?php echo $par_length . strlen($paragraph_2);
+      ?>
+    </h4>
     <!-- Tongue-twister num. 3 -->
     <h2>
       <?php echo $subtitle . '3';
@@ -72,5 +81,9 @@
       <?php echo $paragraph_3_censored;
       ?>
     </p>
+    <h4>
+      <?php echo $par_length . strlen($paragraph_3);
+      ?>
+    </h4>
   </body>
 </html>
