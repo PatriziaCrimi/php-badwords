@@ -17,73 +17,80 @@
   <head>
     <meta charset="utf-8">
     <title>Censuratore Badwords</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>
-      <?php echo $title ?>
-    </h1>
-    <!-- Tongue-twister num. 1 -->
-    <h2>
-      <?php echo $subtitle . '1';
-      ?>
-    </h2>
-    <p>
-      <?php echo $paragraph_1;
-      ?>
-    </p>
-    <h3>
-      <?php echo $censored;
-      ?>
-    </h3>
-    <p>
-      <?php echo $paragraph_1_censored;
-      ?>
-    </p>
-    <h4>
-      <?php echo $par_length . strlen($paragraph_1);
-      ?>
-    </h4>
-    <!-- Tongue-twister num. 2 -->
-    <h2>
-      <?php echo $subtitle . '2';
-      ?>
-    </h2>
-    <p>
-      <?php echo $paragraph_2
-      ?>
-    </p>
-    <h3>
-      <?php echo $censored;
-      ?>
-    </h3>
-    <p>
-      <?php echo $paragraph_2_censored;
-      ?>
-    </p>
-    <h4>
-      <?php echo $par_length . strlen($paragraph_2);
-      ?>
-    </h4>
-    <!-- Tongue-twister num. 3 -->
-    <h2>
-      <?php echo $subtitle . '3';
-      ?>
-    </h2>
-    <p>
-      <?php echo $paragraph_3;
-      ?>
-    </p>
-    <h3>
-      <?php echo $censored;
-      ?>
-    </h3>
-    <p>
-      <?php echo $paragraph_3_censored;
-      ?>
-    </p>
-    <h4>
-      <?php echo $par_length . strlen($paragraph_3);
-      ?>
-    </h4>
+    <div id="page-wrapper">
+      <div class="container">
+        <h1>
+          <?php echo $title ?>
+        </h1>
+        <!-- Tongue-twister num. 1 -->
+        <h2>
+          <?php echo $subtitle . '1';
+          ?>
+        </h2>
+        <p>
+          <?php echo $paragraph_1;
+          ?>
+        </p>
+        <h3>
+          <?php echo $censored;
+          ?>
+        </h3>
+        <p>
+          <?php echo $paragraph_1_censored;
+          ?>
+        </p>
+        <h4>
+          <?php echo $par_length . strlen($paragraph_1) . '.';
+          ?>
+        </h4>
+        <!-- Tongue-twister num. 2 -->
+        <h2>
+          <?php echo $subtitle . '2';
+          ?>
+        </h2>
+        <p>
+          <?php echo $paragraph_2
+          ?>
+        </p>
+        <h3>
+          <?php echo $censored;
+          ?>
+        </h3>
+        <p>
+          <?php echo $paragraph_2_censored;
+          ?>
+        </p>
+        <h4>
+          <?php echo $par_length . strlen($paragraph_2) . '.';
+          ?>
+        </h4>
+        <!-- Tongue-twister num. 3 -->
+        <h2>
+          <?php echo $subtitle . '3';
+          ?>
+        </h2>
+        <p>
+          <?php echo $paragraph_3;
+          ?>
+        </p>
+        <h3>
+          <?php echo $censored;
+          ?>
+        </h3>
+        <p>
+          <?php echo $paragraph_3_censored;
+          ?>
+        </p>
+        <h4>
+          <?php echo $par_length . strlen($paragraph_3) . '.';
+          ?>
+        </h4>
+      </div>  <!-- Closing container -->
+    </div>  <!-- Closing page-wrapper -->
   </body>
 </html>
