@@ -1,5 +1,10 @@
 <?php
-  $badword = $_GET['badword'];
+  $badword1 = $_GET['badword1'];
+  $badword2 = $_GET['badword2'];
+  $badword3 = $_GET['badword3'];
+  /*Using & to concatenate them:
+   http://localhost:8888/boolean/php-badwords/index.php?badword1=palla&badword2=rara&badword3=serve
+  */
   $title = 'Censuratore';
   $subtitle = 'Scioglilingua numero: ';
   $censored = 'Scioglilingua censurato:';
@@ -42,7 +47,7 @@
         </h3>
         <p>
           <?php
-            echo str_replace('palla', $badword, $paragraph_1);
+            echo str_replace($badword1, '***', $paragraph_1);
           // echo $paragraph_1_censored;
           ?>
         </p>
@@ -65,7 +70,7 @@
         </h3>
         <p>
           <?php
-            echo str_replace('rara', $badword, $paragraph_2);
+            echo str_replace($badword2, '***', $paragraph_2);
           // echo $paragraph_2_censored;
           ?>
         </p>
@@ -88,7 +93,7 @@
         </h3>
         <p>
           <?php
-          echo str_replace('serve', $badword, $paragraph_3);
+          echo str_replace($badword3, '***', $paragraph_3);
           // echo $paragraph_3_censored;
           ?>
         </p>
