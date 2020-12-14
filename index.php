@@ -5,11 +5,11 @@
   $censored = 'Scioglilingua censurato:';
   $par_length = 'Lunghezza del paragrafo originale: ';
   $paragraph_1 = 'Apelle figlio d\'Apollo fece una palla di pelle di pollo, tutti i pesci vennero a galla per vedere la palla di pelle di pollo fatta da Apelle figlio d\'Apollo.';
-  $paragraph_1_censored = 'Apelle figlio d\'Apollo fece una ' . $badword . ' di pelle di pollo, tutti i pesci vennero a galla per vedere la ' . $badword . ' di pelle di pollo fatta da Apelle figlio d\'Apollo.';
+  // $paragraph_1_censored = 'Apelle figlio d\'Apollo fece una ' . $badword . ' di pelle di pollo, tutti i pesci vennero a galla per vedere la ' . $badword . ' di pelle di pollo fatta da Apelle figlio d\'Apollo.';
   $paragraph_2 = 'Una rara rana nera sulla rena errò una sera, una rara rana bianca sulla rena errò un po\' stanca.';
-  $paragraph_2_censored = 'Una ' . $badword . ' rana nera sulla rena errò una sera, una ' . $badword . ' rana bianca sulla rena errò un po\' stanca.';
-  $paragraph_3 = 'Se la serva non ti serve, a che serve che ti serva di una serva che non serve? Serviti di una serva che serve, e se questa non ti serve, serviti dei miei servi.';
-  $paragraph_3_censored = 'Se la serva non ti ' . $badword . ', a che ' . $badword . ' che ti serva di una serva che non ' . $badword .'? Serviti di una serva che ' . $badword .', e se questa non ti ' . $badword . ', serviti dei miei servi.';
+  // $paragraph_2_censored = 'Una ' . $badword . ' rana nera sulla rena errò una sera, una ' . $badword . ' rana bianca sulla rena errò un po\' stanca.';
+  $paragraph_3 = 'Se la serva non ti serve, a che serve che ti serva una serva che non serve? Serviti di una serva che serve, e se questa non ti serve, serviti dei miei servi.';
+  // $paragraph_3_censored = 'Se la serva non ti ' . $badword . ', a che ' . $badword . ' che ti serva di una serva che non ' . $badword .'? Serviti di una serva che ' . $badword .', e se questa non ti ' . $badword . ', serviti dei miei servi.';
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +41,9 @@
           ?>
         </h3>
         <p>
-          <?php echo $paragraph_1_censored;
+          <?php
+            echo str_replace('palla', $badword, $paragraph_1);
+          // echo $paragraph_1_censored;
           ?>
         </p>
         <h4>
@@ -62,7 +64,9 @@
           ?>
         </h3>
         <p>
-          <?php echo $paragraph_2_censored;
+          <?php
+            echo str_replace('rara', $badword, $paragraph_2);
+          // echo $paragraph_2_censored;
           ?>
         </p>
         <h4>
@@ -83,7 +87,9 @@
           ?>
         </h3>
         <p>
-          <?php echo $paragraph_3_censored;
+          <?php
+          echo str_replace('serve', $badword, $paragraph_3);
+          // echo $paragraph_3_censored;
           ?>
         </p>
         <h4>
