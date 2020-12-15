@@ -10,11 +10,11 @@
   $censored = 'Scioglilingua censurato:';
   $par_length = 'Lunghezza del paragrafo originale: ';
   $paragraph_1 = 'Apelle figlio d\'Apollo fece una palla di pelle di pollo, tutti i pesci vennero a galla per vedere la palla di pelle di pollo fatta da Apelle figlio d\'Apollo.';
-  // $paragraph_1_censored = 'Apelle figlio d\'Apollo fece una ' . $badword . ' di pelle di pollo, tutti i pesci vennero a galla per vedere la ' . $badword . ' di pelle di pollo fatta da Apelle figlio d\'Apollo.';
+  $paragraph_1_censored = str_ireplace($badword1, '***', $paragraph_1);
   $paragraph_2 = 'Una rara rana nera sulla rena errò una sera, una rara rana bianca sulla rena errò un po\' stanca.';
-  // $paragraph_2_censored = 'Una ' . $badword . ' rana nera sulla rena errò una sera, una ' . $badword . ' rana bianca sulla rena errò un po\' stanca.';
+  $paragraph_2_censored = str_ireplace($badword2, '***', $paragraph_2);
   $paragraph_3 = 'Se la serva non ti serve, a che serve che ti serva una serva che non serve? Serviti di una serva che serve, e se questa non ti serve, serviti dei miei servi.';
-  // $paragraph_3_censored = 'Se la serva non ti ' . $badword . ', a che ' . $badword . ' che ti serva di una serva che non ' . $badword .'? Serviti di una serva che ' . $badword .', e se questa non ti ' . $badword . ', serviti dei miei servi.';
+  $paragraph_3_censored = str_ireplace($badword3, '***', $paragraph_3);
 ?>
 
 <!DOCTYPE html>
@@ -47,8 +47,7 @@
         </h3>
         <p>
           <?php
-            echo str_replace($badword1, '***', $paragraph_1);
-          // echo $paragraph_1_censored;
+            echo $paragraph_1_censored;
           ?>
         </p>
         <h4>
@@ -70,8 +69,7 @@
         </h3>
         <p>
           <?php
-            echo str_replace($badword2, '***', $paragraph_2);
-          // echo $paragraph_2_censored;
+            echo $paragraph_2_censored;
           ?>
         </p>
         <h4>
@@ -93,8 +91,7 @@
         </h3>
         <p>
           <?php
-          echo str_replace($badword3, '***', $paragraph_3);
-          // echo $paragraph_3_censored;
+            echo $paragraph_3_censored;
           ?>
         </p>
         <h4>
